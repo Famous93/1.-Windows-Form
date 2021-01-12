@@ -89,6 +89,7 @@ namespace _1.Windows_Form
         {
             julkaisvuosi.Text = DateTime.Now.Year.ToString();
             arvio.Text = "[Kirjoita arvio tähän!";
+            kesto.Text = "0";
 
         }
 
@@ -140,10 +141,10 @@ namespace _1.Windows_Form
 
         private void julkaisvuosi_Leave(object sender, EventArgs e)
         {
-            if (julkaisvuosi.Text == "")
-            {
-                julkaisvuosi.Text = DateTime.Now.Year.ToString();
-            }
+            //if (julkaisvuosi.Text == "")
+            //{
+            //    julkaisvuosi.Text = DateTime.Now.Year.ToString();
+            //}
         }
 
         private void textBox3_Leave(object sender, EventArgs e)
@@ -152,6 +153,44 @@ namespace _1.Windows_Form
             if (textBox3.Text == "")
             {
                 textBox3.Text = "[syötä elokuvan nimi]";
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (julkaisvuosi.Text == "")
+            {
+                MessageBox.Show("Julkaisvuosi kentä on tyhjä");
+            }
+
+            if (kesto.Text == "")
+            {
+                MessageBox.Show("Kesto kentä on tyhjä");
+            }
+            
+            else
+            {
+                MessageBox.Show("Kaikki OK!");
+            }
+
+
+        }
+
+        private void julkaisvuosi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char num = e.KeyChar;
+            if (!char.IsDigit(num))
+            {
+                MessageBox.Show("Ei ole numeroita!");
+            }
+        }
+
+        private void kesto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char num = e.KeyChar;
+            if (!char.IsDigit(num))
+            {
+                MessageBox.Show("Ei ole numeroita!");
             }
         }
     }

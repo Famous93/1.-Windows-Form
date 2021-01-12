@@ -73,7 +73,7 @@ namespace _1.Windows_Form
             this.tietojaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(957, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(957, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -183,8 +183,8 @@ namespace _1.Windows_Form
             this.kesto.Name = "kesto";
             this.kesto.Size = new System.Drawing.Size(128, 22);
             this.kesto.TabIndex = 6;
-            this.kesto.Text = "0";
             this.kesto.Enter += new System.EventHandler(this.textBox7_Enter);
+            this.kesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kesto_KeyPress);
             // 
             // textBox6
             // 
@@ -216,6 +216,7 @@ namespace _1.Windows_Form
             this.julkaisvuosi.TabIndex = 3;
             this.julkaisvuosi.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.julkaisvuosi.Enter += new System.EventHandler(this.julkaisvuosi_Enter);
+            this.julkaisvuosi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.julkaisvuosi_KeyPress);
             this.julkaisvuosi.Leave += new System.EventHandler(this.julkaisvuosi_Leave);
             // 
             // textBox3
@@ -373,6 +374,7 @@ namespace _1.Windows_Form
             this.button4.TabIndex = 1;
             this.button4.Text = "Tallenna";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
