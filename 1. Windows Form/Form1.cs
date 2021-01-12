@@ -39,7 +39,7 @@ namespace _1.Windows_Form
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -60,6 +60,99 @@ namespace _1.Windows_Form
         private void domainUpDown2_SelectedItemChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tämän sovelluksen on tehnyt Maroof Ghalji");
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "[syötä elokuvan nimi]")
+            {
+                textBox3.Text = "";
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            julkaisvuosi.Text = DateTime.Now.Year.ToString();
+            arvio.Text = "[Kirjoita arvio tähän!";
+
+        }
+
+        private void julkaisvuosi_Enter(object sender, EventArgs e)
+        {
+
+            if (julkaisvuosi.Text == DateTime.Now.Year.ToString())
+            {
+                julkaisvuosi.Text = "";
+            }
+        }
+
+        private void arvio_Enter(object sender, EventArgs e)
+        {
+
+            if (arvio.Text == "[Kirjoita arvio tähän!")
+            {
+                arvio.Text = "";
+            }
+
+
+        }
+
+        private void textBox7_Enter(object sender, EventArgs e)
+        {
+            if (kesto.Text == "0")
+            {
+                kesto.Text = "";
+            }
+        }
+
+        private void poistuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void arvio_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void arvio_Leave(object sender, EventArgs e)
+        {
+            if (arvio.Text == "")
+            {
+                arvio.Text = "[Kirjoita arvio tähän!";
+            }
+        }
+
+        private void julkaisvuosi_Leave(object sender, EventArgs e)
+        {
+            if (julkaisvuosi.Text == "")
+            {
+                julkaisvuosi.Text = DateTime.Now.Year.ToString();
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox3.Text == "")
+            {
+                textBox3.Text = "[syötä elokuvan nimi]";
+            }
         }
     }
 }
